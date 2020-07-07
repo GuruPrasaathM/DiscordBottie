@@ -423,7 +423,7 @@ async def badbot(ctx, *, issue):
     author = ctx.message.author
     channel = await guild.owner.create_dm()
     await channel.send(f'''{author.mention} reported me for "{issue}", 
-                       I am sorrie about this, the same has been reported to the bot dev''')
+    I am sorrie about this, the same has been reported to the bot dev''')
     await ctx.send(f"Sorrie, I'll report this issue to owner, Your issue: {issue}")
 
 
