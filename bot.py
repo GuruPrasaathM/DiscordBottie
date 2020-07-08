@@ -412,7 +412,7 @@ async def thought(ctx):
         "PC's freeze when they overheat.",
         "memes are just inside jokes you spend with complete strangers.",
         "beef jerky is just cow raisins.",
-        "the milk in a gallon of milk could be from hundreds of different cows."  
+        "the milk in a gallon of milk could be from hundreds of different cows."
     ]
     await ctx.send(random.choice(thoughts))
 
@@ -422,7 +422,7 @@ async def badbot(ctx, *, issue):
     guild = ctx.message.guild
     author = ctx.message.author
     channel = await guild.owner.create_dm()
-    await channel.send(f'''{author.mention} reported me for "{issue}", 
+    await channel.send(f'''{author.mention} reported me for "{issue}",
    I am sorrie about this, the same has been reported to the bot dev''')
     await ctx.send(f"Sorrie, I'll report this issue to owner, Your issue: {issue}")
 
@@ -437,6 +437,11 @@ async def badbot_error(ctx, error):
 async def goodbot(ctx):
     author = ctx.message.author
     await ctx.send(f'Thank you {author.mention}. You made me happie :D')
+
+@bot.command()
+async def guru(ctx):
+    await ctx.send(f'Greatest Hooman to ever exist')
+
 
 
 bot.run(os.environ['DISCORD_TOKEN'])
