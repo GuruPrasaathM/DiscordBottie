@@ -1,8 +1,7 @@
 import discord
 import json
 import random
-from discord.ext import commands, tasks, Activity, ActivityType
-from itertools import cycle
+from discord.ext import commands, tasks
 import os
 
 bot = commands.Bot(command_prefix='.')
@@ -14,11 +13,6 @@ status = cycle(['Just Chilling', 'Eating Children', 'Sleeping', 'Bombing Orphana
 async def on_ready():
     change_status.start()
     print('Bot is online.')
-
-@bot.event
-async def howmany():
-    gcount=str(len(bot.guilds))
-    await ctx.send(f'Currently active in {gcount} servers')
 
 @bot.event
 async def on_command_error(ctx, error):
