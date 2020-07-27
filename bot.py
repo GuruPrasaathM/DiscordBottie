@@ -17,7 +17,7 @@ async def on_ready():
 
 @bot.event
 async def howmany():
-    gcount=str(len(bot.guilds))
+    gcount=f'{len(bot.guilds)}'
     await ctx.send(f'Currently active in {gcount} servers')
 
 @bot.event
