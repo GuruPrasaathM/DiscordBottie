@@ -164,8 +164,6 @@ async def repeat(ctx, *, message):
         await ctx.send('i know you are')
     elif message == "i'm stupid" or message == 'im stupid' or message == 'i am stupid':
         await ctx.send('i know you are')
-    elif message == "i'm stoopid" or message == 'im stoopid' or message == 'i am stoopid':
-        await ctx.send('No hooman, you are retarded, yu cant even spell stupid correctly')
     else:
         await ctx.send(message)
 
@@ -443,5 +441,7 @@ async def goodbot(ctx):
 @bot.command()
 async def guru(ctx):
     await ctx.send(f'Greatest Hooman to ever exist')
+
+
 
 bot.run(os.environ['DISCORD_TOKEN'])
